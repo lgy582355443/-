@@ -1,0 +1,294 @@
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    padding: 20px 0;
+    z-index: 999;
+    background-color: #fff;
+}
+.header .header-c{
+    position: relative;
+    width: 70%;
+    height: 52px;
+    margin: 0 auto;    
+}
+.header-c .logo{
+    float: left;
+    margin-left: 20px;
+}
+.header-c .close{
+    display: none;
+}
+.header-c .nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+}
+.header-c .nav .nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;    
+}
+.header-c .nav .nav-item::after{
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: rgba(106, 141, 201,0);
+}
+.header-c .nav .nav-item:nth-child(2)::after{
+    background-color: rgba(106, 141, 201,1);
+}
+.header-c .nav .nav-item>a{ 
+    display: block;
+    width: 40px;
+    padding: 10px 0;
+    color: #bfbfbf;
+}
+.header-c .nav .nav-item>a.active{
+    font-size: 20px;
+    color: #7092ce;
+}
+.header-c .nav .nav-item:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+.header-c .nav .nav-item:hover a{
+    color: #7092ce;
+}
+.header-c .nav .nav-item:hover::after{
+    background-color: rgba(106, 141, 201,1);
+}
+
+/* ...........banner........... */
+
+.banner{
+    width: 100%;
+    min-width: 1200px;
+    margin-top:92px;
+    overflow: hidden;
+}
+.banner .banner-c{
+    width: 1200px;
+    margin:0 auto;
+}
+.banner .banner-c>img{
+    width: 100%;
+}
+
+/* ...............title................... */
+.container{
+    width: 100%;
+    min-width: 1200px;
+    padding: 50px 0;
+    background-color: #F5F5F5;
+}
+.container .container-c{
+    width: 1200px;
+    margin: 0 auto;
+}
+.container .container-c .title{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.title .title-l{
+    color:#767676;
+}
+.title .title-l a{
+    color:#7092ce;
+}
+.title .title-r{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title .title-r .pro-title-item{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; 
+    border-right: 1px solid #bfbfbf;
+    color: #bfbfbf;
+} 
+.title .title-r .pro-title-item>a{
+    color: #bfbfbf;
+}
+.title .title-r .pro-title-item:last-child{
+    border-right: none;
+}
+.title .title-r .pro-title-item::after{
+    content: "";
+    width: 20px;
+    height: 1px;
+    margin-top:10px;
+    background-color: rgba(106, 141, 201,0);
+}
+.title .title-r .pro-title-item>a.active{
+    transform: scale(1.2);
+    color: #7092ce;
+}
+.title .title-r .pro-title-item.active::after{
+    background-color: rgba(106, 141, 201,1);
+}
+.title .title-r .pro-title-item:hover a{
+    color: #7092ce;
+}
+.title .title-r .pro-title-item:hover::after{
+    background-color: rgba(106, 141, 201,1);
+    transition: all 0.3s;
+}
+
+/* ................home................ */
+.home{
+    width: 100%;
+}
+.project-box{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-around;
+    align-content: center;
+}
+.project-box .project-item{
+    position: relative;
+    width: 360px;
+    height: 270px;
+    margin: 20px;
+    overflow: hidden;
+}
+.project-box .project-item>img{
+    width: 100%;
+    height: 100%;
+}
+.project-box .project-item .text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 1;
+    transition: 0.3s all;
+}
+.project-box .project-item .text .btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+    background: url(../../../static/imgs/btn.png) no-repeat center;
+}
+.project-box .project-item .text .text-t{
+    margin: 40px 0 5px;
+    text-indent: 40px;
+    font-size: 16px;
+    color: #767676;
+}
+.project-box .project-item .text .text-b{
+    text-indent: 40px;
+    font-size: 12px;
+    color: #767676;
+}
+.project-box .project-item .masks{
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 990;
+    background-color: rgba(0,0,0,0.6);
+}
+.project-box .project-item .masks .m-text{
+    margin:40px 40px 0 0;
+    color: white;
+    font-size: 16px;
+    text-indent: 20px;
+}
+.project-box .project-item .masks .m-text .text-p{
+    margin-top: 20px;
+    text-indent: 2em;
+    color: white;
+    font-size: 14px;
+}
+.project-box .project-item .masks .m-text .btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+    background: url(../../../static/imgs/btn.png) no-repeat center;
+}
+.project-box .project-item:hover .text{
+    opacity: 0;
+    transition: 0.3s all;
+}
+.project-box .project-item:hover .masks{
+    left: 0;
+    top: 0;
+    transition: 0.3s all;
+}
+
+/* .................footer................. */
+
+
+.footer{
+    width: 100%; 
+    min-width: 1200px;
+    background-color: #faf9f9;
+    box-shadow: 0 0 5px rgb(221, 221, 221);
+    overflow: hidden;
+}
+.footer .footer-c{
+    width: 1200px;
+    margin:40px auto;
+}
+.tell-way{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tell-way ul{
+    width: 350px;
+}
+.tell-way .next li{
+    width: 100%;
+    color: #767676;
+    padding:0;
+    display: flex; 
+    justify-content: center;
+}
+.tell-way li{
+    flex: 1;
+    width: 100%;
+    color: #767676;
+    margin: 20px 0;
+    padding:0 30px;
+}
+.tell-way .next li .iconfont{
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+.tell-way .next li .iconfont.wx{
+    background: url(../../../static/imgs/wx.png) center no-repeat;
+}
+.tell-way .next li .iconfont.qq{
+    background: url(../../../static/imgs/qq.png) center no-repeat;
+}
+.tell-way .next li .iconfont.wb{
+    background: url(../../../static/imgs/xl.png) center no-repeat;
+}

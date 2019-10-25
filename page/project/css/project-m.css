@@ -1,0 +1,193 @@
+@media  (max-width: 768px){
+    .header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 52px;
+        padding: 0px 0;
+        z-index: 999;
+        background-color: #fff;
+    }
+    .header .header-c{
+        position: relative;
+        width: 100%;
+        height: 52px;
+        margin: 0 auto;
+    }
+    .header-c .logo{
+        float: left;
+        margin: 6px 0 0 20px;
+    }
+    .header-c .logo img{
+        height: 40px;
+    }
+    .header-c .close{
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 0;
+        width: 30px;
+        height: 52px;
+    }
+    .header-c .close span{
+        position: absolute;
+        left: 0;
+        top: 25px;
+        width: 30px;
+        height: 2px;
+        background-color: rgba(106, 141, 201,1);
+        transform-origin: center; 
+    }
+    .header-c .close .top{
+        transform:translateY(7px);       
+    }
+    .header-c .close .bottom{
+        transform:translateY(-7px);
+    }
+    .header-c .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        top: 50px;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.5s;
+    }
+    .header-c .nav.nav-show{
+        position: fixed;
+        right: -100%;
+        top: 50px;
+        transition: all 0.5s;
+    }
+    .header-c .nav .nav-item{
+        height: 30px;
+        margin-top:10px; 
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;    
+    }
+    .header-c .nav .nav-item::after{
+        content: "";
+        width: 20px;
+        height: 3px;
+        background-color: rgba(106, 141, 201,0);
+    }
+    .header-c .nav .nav-item:nth-child(2)::after{
+        background-color: rgba(106, 141, 201,1);
+    }
+    .header-c .nav .nav-item>a{ 
+        padding: 10px;
+        color:white;
+    }
+    .header-c .nav .nav-item>a.active{
+        font-size: 20px;
+        color: #7092ce;
+    }
+    .header-c .nav .nav-item:hover a{
+        font-size: 20px;
+        color: #7092ce;
+        transition: all 0.3s;
+    }
+    .header-c .nav .nav-item:hover::after{
+        background-color: rgba(106, 141, 201,1);
+        transition: all 0.3s;
+    }
+
+/* ..................container................. */
+    .banner{
+        min-width: 0px;
+        margin-top: 52px;
+    }
+    .container{
+        width: 100%;
+        min-width: 0px;
+        padding: 50px 0;
+        background-color: #F5F5F5;
+    }
+    .container .container-c{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* ..........................title.................. */
+
+    .container .container-c .title{
+        width: 100%;     
+        margin: 50px 0;
+        display: block;
+        justify-content: space-between;
+    }
+    .title .title-l{
+        color:#767676;
+    }
+    .title .title-l a{
+        color:#7092ce;
+    }
+    .title .title-r{
+        width: 90%;
+        margin: 30px auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .................footer................. */
+
+
+.footer{
+    width: 100%;
+    min-width: 0px; 
+    background-color: #faf9f9;
+    box-shadow: 0 0 5px rgb(221, 221, 221);
+    overflow: hidden;
+}
+.footer .footer-c{
+    width: 70%;
+    margin:40px auto;
+}
+.tell-way{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tell-way ul{
+    width: 350px;
+}
+.tell-way ul:nth-child(2){
+    border-left:none;
+    border-right: none;
+}
+.tell-way .next li{
+    width: 100%;
+    color: #767676;
+    display: flex; 
+    justify-content: center;
+}
+.tell-way li{
+    flex: 1;
+    width: 100%;
+    color: #767676;
+    margin: 20px 0;
+}
+.tell-way .next li .iconfont{
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+.tell-way .next li .iconfont.wx{
+    background: url(../../../static/imgs/wx.png) center no-repeat;
+}
+.tell-way .next li .iconfont.qq{
+    background: url(../../../static/imgs/qq.png) center no-repeat;
+}
+.tell-way .next li .iconfont.wb{
+    background: url(../../../static/imgs/xl.png) center no-repeat;
+}
+}
